@@ -6,14 +6,27 @@ p {
   body {
     font-family: Roboto, Arial;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 123px;
     padding-left: 96px;
     padding-right: 24px;
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
   }
 
   /*.....header.......*/
 
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    
+  }
+::-webkit-scrollbar-track{
+  background: none;
+  
+}
+::-webkit-scrollbar-thumb{
+  background: gray;
+  border-radius: 6px;
+}
 .header {
     height: 55px;
   
@@ -26,17 +39,14 @@ p {
     left: 0;
     right: 0;
     z-index: 100;
-  
     background-color: white;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(228, 228, 228);
   }
   
   .left-section {
     flex: 1;
     display: flex;
     align-items: center;
+    max-width: 120px;
   }
   
   .hamburger-menu {
@@ -65,8 +75,12 @@ p {
     font-size: 16px;
     border: 1px solid rgb(192, 192, 192);
     border-radius: 20px;
+    border-top-right-radius : 0px ;
+    border-bottom-right-radius: 0px ;
+    margin-right: -20px;
     box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
     width: 0;
+    z-index: 1;
   }
   
   .search-bar::placeholder {
@@ -74,15 +88,15 @@ p {
   }
   
   .search-button {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: 60px;
     background-color: rgb(240, 240, 240);
     border-width: 1px;
     border-style: solid;
     border-radius: 25px;
     border-color: rgb(192, 192, 192);
-    margin-left: 5px;
     margin-right: 10px;
+    padding-left: 20px;
   }
   
   .search-button,
@@ -178,6 +192,38 @@ p {
     height: 32px;
     border-radius: 16px;
   }
+  /*....filterbar...*/
+  .filter-bar{
+    background-color: white;
+    height: 60px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 55px;
+    z-index: 100;
+  }
+  .filter-bar-element{
+    padding: 12px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 5px;
+    margin-right: 12px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+  }
+ .filter-bar-element-text{
+  font-family: Roboto, Arial;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+ }
+ .filter-bar-element:hover{
+  background-color: rgb(230, 230, 230);
+ }
+ .filter-bar-element:visited{
+  background-color: rgb(0, 0, 0);
+ }
   /*.....sidebar......*/
   .sidebar {
     position: fixed;
@@ -191,6 +237,7 @@ p {
   }
   
   .sidebar-link {
+    border-radius: 10px;
     height: 74px;
     display: flex;
     justify-content: center;
@@ -214,6 +261,7 @@ p {
   /*....video...*/
   .thumbnail {
     width: 100%;
+    border-radius: 10px;
   }
   
   .video-title {
