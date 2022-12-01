@@ -125,6 +125,7 @@ p {
     transition: opacity 0.15s;
     pointer-events: none;
     white-space: nowrap;
+    z-index:200;
   }
   
   .search-button:hover .tooltip,
